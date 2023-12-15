@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <!-- 오른쪽 사이드 바, 레이아웃 설정 -->
-
+<!-- 저장 필요 X -->
 <div class="right-sidebar">
 	<div class="sidebar-title">
 		<h3 class="weight-600 font-16 text-blue">레이아웃 설정
