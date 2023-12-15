@@ -1,0 +1,74 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<div class="header">
+	<div class="header-left">
+		<!-- 메뉴 펼치기 아이콘 -->
+		<div class="menu-icon bi bi-list"></div>
+		<!-- 메뉴 검색, 만약 빼도 된다면 삭제 가능 -->
+		<div class="search-toggle-icon bi bi-search"
+			data-toggle="header_search"></div>
+		<div class="header-search">
+			<form>
+				<div class="form-group mb-0">
+					<i class="dw dw-search2 search-icon"></i> <input type="text"
+						class="form-control search-input" placeholder="검색" />
+					<div class="dropdown">
+						<div class="dropdown-menu dropdown-menu-right">
+							<!-- 연관 검색어 비동기 -->
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<!-- 오른쪽 상단, 프로필&알림 등 -->
+	<div class="header-right">
+		<div class="dashboard-setting user-notification">
+			<div class="dropdown">
+				<a class="dropdown-toggle no-arrow" href="javascript:;"
+					data-toggle="right-sidebar"> <i class="dw dw-settings2"></i>
+				</a>
+			</div>
+		</div>
+		<div class="user-notification">
+			<div class="dropdown">
+				<a class="dropdown-toggle no-arrow" href="#" role="button"
+					data-toggle="dropdown"> <i
+					class="icon-copy dw dw-notification"></i> <span
+					class="badge notification-active"></span>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right">
+					<div class="notification-list mx-h-350 customscroll">
+						<ul>
+						<!-- 알림 내용, 이미지 -->
+							<li><a href="#"> <img src="resources/vendors/images/img.jpg"
+									alt="" />
+									<h3>John Doe</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
+										elit, sed...</p>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 유저 정보 (드롭다운 포함) -->
+		<div class="user-info-dropdown">
+			<div class="dropdown">
+				<a class="dropdown-toggle" href="#" role="button"
+					data-toggle="dropdown"> <span class="user-icon">
+						<img src="resources/vendors/images/photo1.jpg" alt="" />
+				</span> <span class="user-name">유저명</span>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+					<a class="dropdown-item" href="profile.html"> <i class="dw dw-user1"></i> 프로필</a>
+					<a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i> 설정</a>
+					<a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> 고객센터</a>
+					<a class="dropdown-item" href="login.html"><i class="dw dw-logout"></i> 로그아웃</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
