@@ -50,7 +50,7 @@
 						<!-- 알림 내용, 이미지 -->
 							<li>
 								<a href="#"> 
-									<img src="resources/vendors/images/img.jpg" alt="" />
+									<img src="../resources/vendors/images/img.jpg" alt="" />
 									<h3>John Doe</h3>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 								</a>
@@ -66,7 +66,7 @@
 			<div class="dropdown">
 				<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 					<span class="user-icon">
-							<img src="resources/vendors/images/photo1.jpg" alt="" />
+							<img src="../resources/vendors/images/photo1.jpg" alt="" />
 					</span> 
 					<span class="user-name">직원명(or 사번)</span>
 				</a>

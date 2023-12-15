@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-/** FacilityController : ¼³ºñ °ü·Ã ÄÁÆ®·Ñ·¯ **/
+/** FacilityController : ì„¤ë¹„ ì»¨íŠ¸ë¡¤ëŸ¬ **/
 
 @Controller
 @RequestMapping(value = "/facility/*")
@@ -13,44 +13,46 @@ public class FacilityController {
 	// http://localhost:8088/facility/list
 	@RequestMapping(value = "/list")
 	public void facilityListGET() {
-		// ¼³ºñ ¸ñ·Ï return
+		// ì„¤ë¹„ ëª©ë¡ return
+		
 	}
 
-	// http://localhost:8088/facility/fac-insert
-	@RequestMapping(value = "/fac-insert", method = RequestMethod.GET)
+	// http://localhost:8088/facility/insert
+	@RequestMapping(value = "/insert", method = RequestMethod.GET)
 	public void facilityInsertGET() {
-		// ¼³ºñ Ãß°¡ Æû
+		// ì„¤ë¹„ ì¶”ê°€ í¼
+		
 	}
 	
-	@RequestMapping(value = "/facility-insert", method = RequestMethod.POST)
+	@RequestMapping(value = "/insert", method = RequestMethod.POST)
 	public void facilityInsertPOST() {
-		// ¼³ºñ Ãß°¡ ¾×¼Ç
+		// ì„¤ë¹„ ì¶”ê°€ ì•¡ì…˜
+		
 	}
 	
-	@RequestMapping(value = "/facility-update", method = RequestMethod.GET)
+	// http://localhost:8088/facility/update
+	@RequestMapping(value = "/update", method = RequestMethod.GET)
 	public void facilityUpdateGET() {
-		// ¼³ºñ ¼öÁ¤ Æû
+		// ì„¤ë¹„ ìˆ˜ì • í¼
+		
 	}
 	
-	@RequestMapping(value = "/facility-update", method = RequestMethod.POST)
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
 	public void facilityUpdatePOST() {
-		// ¼³ºñ ¼öÁ¤ ¾×¼Ç
+		// ì„¤ë¹„ ìˆ˜ì • ì•¡ì…˜
+		
 	}
 	
-	@RequestMapping(value = "/facility-delete", method = RequestMethod.GET)
+	// http://localhost:8088/facility/delete
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public void facilityDeleteGET() {
-		// ¼³ºñ »èÁ¦ Æû
+		// ì„¤ë¹„ ì‚­ì œ í¼
+		
 	}
 	
-	@RequestMapping(value = "/facility-delete", method = RequestMethod.POST)
+	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	public void facilityDeletePOST() {
-		// ¼³ºñ »èÁ¦ ¾×¼Ç
+		// ì„¤ë¹„ ì‚­ì œ ì•¡ì…˜
+		
 	}
-	
-	@RequestMapping(value = "/maintenance-list", method = RequestMethod.GET)
-	public void facilityMaintenanceListGET() {
-		// ¼³ºñ º¸Àü ¸®½ºÆ®
-	}
-	
-	
 }

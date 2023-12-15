@@ -1,15 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<!-- 헤드, css 등, title 제외 -->
 <!-- Basic Page Info -->
 <meta charset="utf-8" />
 
-<!-- Site favicon -->
+<!-- 사이트 아이콘 -->
 <link rel="apple-touch-icon" sizes="180x180"
-	href="resources/vendors/images/apple-touch-icon.png" />
+	href="../resources/vendors/images/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32"
-	href="resources/vendors/images/favicon-32x32.png" />
+	href="../resources/vendors/images/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16"
-	href="resources/vendors/images/favicon-16x16.png" />
+	href="../resources/vendors/images/favicon-16x16.png" />
 
 <!-- Mobile Specific Metas -->
 <meta name="viewport"
@@ -19,17 +21,18 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap"
 	rel="stylesheet">
+	
 <!-- CSS -->
 <link rel="stylesheet" type="text/css"
-	href="resources/vendors/styles/core.css" />
+	href="../resources/vendors/styles/core.css" />
 <link rel="stylesheet" type="text/css"
-	href="resources/vendors/styles/icon-font.min.css" />
+	href="../resources/vendors/styles/icon-font.min.css" />
 <link rel="stylesheet" type="text/css"
-	href="resources/src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
+	href="../resources/src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
 <link rel="stylesheet" type="text/css"
-	href="resources/src/plugins/datatables/css/responsive.bootstrap4.min.css" />
+	href="../resources/src/plugins/datatables/css/responsive.bootstrap4.min.css" />
 <link rel="stylesheet" type="text/css"
-	href="resources/vendors/styles/style.css" />
+	href="../resources/vendors/styles/style.css" />
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async

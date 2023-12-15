@@ -8,8 +8,8 @@
 	<div class="brand-logo">
 		<a href="/">
 			<!-- 로고 이미지 svg -->
-			<img src="resources/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
-			<img src="resources/vendors/images/deskapp-logo-white.svg" alt="" class="light-logo" />
+			<img src="../resources/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
+			<img src="../resources/vendors/images/deskapp-logo-white.svg" alt="" class="light-logo" />
 		</a>
 		
 		<!-- 메뉴 사이드바 닫기 -->
