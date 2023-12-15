@@ -20,9 +20,8 @@ public class testConnection {
 	
 	private static final Logger logger = LoggerFactory.getLogger(testConnection.class);
 	
-	// ¿¬°á Å×½ºÆ®
 	@Test
-	public void ¿¬°áÅ×½ºÆ®() {
+	public void DBì—°ê²°í™•ì¸() {
 		logger.debug("SqlSession : " + sqlSession);
 		logger.debug(sqlSession.selectOne(NAMESPACE + ".getTime"));
 	}
