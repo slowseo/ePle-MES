@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
+<div class="footer-wrap pd-20 mb-20 card-box">
+	ePle MES made by
+	<a href="https://github.com/dropways" target="_blank">아이티윌 부산 2023년 7월 프로젝트 2차 1조</a>
+</div>
 <!-- 푸터, 스크립트 전용 -->
 <!-- js -->
 <script src="../resources/vendors/scripts/core.js"></script>

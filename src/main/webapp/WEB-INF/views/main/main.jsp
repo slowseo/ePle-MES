@@ -12,10 +12,12 @@
 	<%@ include file="../include/right-side-bar.jsp"%>
 	<%@ include file="../include/left-side-bar.jsp"%>
 	<div class="main-container">
-		<h1>Hello world!</h1>
+		<div class="pd-ltr-20">
+			<h1>Hello world!</h1>
 
-		<P>The time on the server is ${serverTime}.</P>
+			<P>The time on the server is ${serverTime}.</P>
+			<%@ include file="../include/footer.jsp"%>
+		</div>
 	</div>
-	<%@ include file="../include/footer.jsp"%>
 </body>
 </html>
