@@ -35,19 +35,60 @@
 						<span aria-hidden="true">×</span>
 					</button>
 				</div>
+				<div class="alert alert-info alert-dismissible fade show"
+					role="alert">
+					<strong>보전 수정</strong>이 완료되었습니다!
+					<button type="button" class="close" data-dismiss="alert"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="alert alert-warning alert-dismissible fade show"
+					role="alert">
+					<strong>보전 삭제</strong>가 완료되지 않았습니다!
+					<button type="button" class="close" data-dismiss="alert"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
 				<!-- 아코디언 시작 -->
 				<div class="faq-wrap">
 					<div id="accordion">
 						<div class="card">
 							<div class="card-header">
 								<button class="btn btn-block collapsed" data-toggle="collapse"
-									data-target="#faq1" aria-expanded="false">상세 검색</button>
+									data-target="#faq1" aria-expanded="false">
+									<b>검색</b>
+								</button>
 							</div>
 							<div id="faq1" class="collapse" data-parent="#accordion" style="">
 								<div class="card-body">
 									<form class="accordion-search" method="get">
 										<div class="col-md-12">
 											<div class="form-group">
+												<div class="row">
+												<h4 class="text-blue h4">기본 검색 </h4>
+												
+													<div class="btn-group">
+														<div class="btn-group dropdown">
+															<button type="button"
+																class="btn btn-primary dropdown-toggle waves-effect"
+																data-toggle="dropdown" aria-expanded="false">
+																카테고리 <span class="caret"></span>
+															</button>
+															<div class="dropdown-menu" style="">
+																<a class="dropdown-item" href="javascript:function();">A</a>
+																<a class="dropdown-item" href="javascript:function();">B</a>
+															</div>
+														</div>
+														<input type="hidden" name="searchCategory">
+														<input type="text" name="searchKeyword" class="form-control" style="width:100%;" placeholder="검색어 입력">
+													</div>
+												</div>
+												<hr>
+												<div class="row">
+													<h4 class="text-blue h4">상세 검색</h4>
+												</div>
 												<div class="row">
 													<div class="col-md-1 col-sm-12">
 														<label class="weight-600">체크 박스</label>
@@ -124,8 +165,8 @@
 													</div>
 													<div class="col-md-2 col-sm-12">
 														<div class="form-group">
-															<label>기간</label>
-															<input class="form-control datetimepicker-range"
+															<label>기간</label> <input
+																class="form-control datetimepicker-range"
 																placeholder="Select Month" type="text" name="datetime">
 														</div>
 													</div>
@@ -158,11 +199,18 @@
 															</select>
 														</div>
 													</div>
-													
 												</div>
 											</div>
 										</div>
 									</form>
+									<div class="btn-group pull-right" style="margin-bottom: 10px">
+										<button type="button" class="btn btn-primary" id="search">
+											<b>검색</b>
+										</button>
+										<button type="button" class="btn btn-secondary" id="reset">
+											<b>초기화</b>
+										</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -186,7 +234,7 @@
 					</div>
 					<div class="pb-20">
 						<div class="col-sm-30">
-							<form class="fr">
+							<form class="table">
 								<table class="table table-striped">
 									<tr>
 										<td style="width: 100px;">
@@ -244,15 +292,18 @@
 										role="status" aria-live="polite">&nbsp;&nbsp;(전체 수) 중
 										(검색 결과) 개</div>
 								</div>
-								<div class="col-sm-12 col-md-7">
-									<div class="btn-group">
-										<button type="button" class="btn btn-light">이전</button>
-										<button type="button" class="btn btn-primary">1</button>
-										<button type="button" class="btn btn-light">2</button>
-										<button type="button" class="btn btn-light">3</button>
-										<button type="button" class="btn btn-light">4</button>
-										<button type="button" class="btn btn-light">다음</button>
-									</div>
+							</div>
+							<div class="btn-toolbar justify-content-center mb-15">
+								<div class="btn-group">
+									<a href="#" class="btn btn-outline-primary prev"><i
+										class="fa fa-angle-double-left"></i></a> <a href="#"
+										class="btn btn-outline-primary">1</a> <a href="#"
+										class="btn btn-outline-primary">2</a> <span
+										class="btn btn-primary current">3</span> <a href="#"
+										class="btn btn-outline-primary">4</a> <a href="#"
+										class="btn btn-outline-primary">5</a> <a href="#"
+										class="btn btn-outline-primary next"><i
+										class="fa fa-angle-double-right"></i></a>
 								</div>
 							</div>
 						</div>
@@ -270,27 +321,26 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			// 상세검색 초기화
-				
-			// 상세검색 진행
-				
 			
+			// 상세검색 진행
+
 			// 추가
 			$("#add").click(function() {
 				location.href = '/maintenance/add';
 			});
-			
+
 			// 수정 - 표에서 선택된 게 1개인 경우에만 열리도록 함
 			$("#update").click(function() {
-				$(".fr").attr("action", "/maintenance/update");
-				$(".fr").attr("method", "GET");
-				$(".fr").submit();
+				$(".table").attr("action", "/maintenance/update");
+				$(".table").attr("method", "GET");
+				$(".table").submit();
 			});
-			
+
 			// 삭제 - 표에서 선택된 게 1 ~ 여러개인 경우에만 열리도록 함
 			$("#delete").click(function() {
-				$(".fr").attr("action", "/maintenance/delete");
-				$(".fr").attr("method", "GET");
-				$(".fr").submit();
+				$(".table").attr("action", "/maintenance/delete");
+				$(".table").attr("method", "GET");
+				$(".table").submit();
 			});
 		});
 	</script>
