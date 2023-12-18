@@ -9,23 +9,6 @@
 	
 		<!-- 메뉴 펼치기 아이콘 -->
 		<div class="menu-icon bi bi-list"></div>
-		
-		<!-- 메뉴 검색, 만약 빼도 된다면 삭제 가능 -->
-		<div class="search-toggle-icon bi bi-search"
-			data-toggle="header_search"></div>
-		<div class="header-search">
-			<form>
-				<div class="form-group mb-0">
-					<i class="dw dw-search2 search-icon"></i> <input type="text"
-						class="form-control search-input" placeholder="검색" />
-					<div class="dropdown">
-						<div class="dropdown-menu dropdown-menu-right">
-							<!-- 연관 검색어 비동기 -->
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
 	</div>
 	
 	<!-- 헤더 오른쪽 구간, 프로필&알림 등 -->
