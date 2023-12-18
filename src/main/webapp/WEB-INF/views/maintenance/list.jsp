@@ -63,13 +63,14 @@
 							</div>
 							<div id="faq1" class="collapse" data-parent="#accordion" style="">
 								<div class="card-body">
-									<form class="accordion-search">
+									<form class="accordion-search" method="GET" action="#">
 										<div class="col-md-12">
 											<div class="form-group">
 												<div class="row">
 													<h4 class="text-blue h4">기본 검색</h4>
 
-													<div class="col-md-5 col-sm-12 btn-group" style="margin-left:auto;">
+													<div class="col-md-5 col-sm-12 btn-group"
+														style="margin-left: auto;">
 														<div class="btn-group dropdown">
 															<button type="button" id="searchCategoryButton"
 																class="btn btn-primary dropdown-toggle waves-effect"
@@ -77,10 +78,14 @@
 																카테고리 <span class="caret"></span>
 															</button>
 															<div class="dropdown-menu" style="">
-																<a class="dropdown-item" href="javascript:buttonCategory();">선택</a>
-																<a class="dropdown-item" href="javascript:buttonCategory('A');">A</a>
-																<a class="dropdown-item" href="javascript:buttonCategory('B');">B</a>
-																<a class="dropdown-item" href="javascript:buttonCategory('C');">C</a>
+																<a class="dropdown-item"
+																	href="javascript:buttonCategory();">선택</a> <a
+																	class="dropdown-item"
+																	href="javascript:buttonCategory('A');">A</a> <a
+																	class="dropdown-item"
+																	href="javascript:buttonCategory('B');">B</a> <a
+																	class="dropdown-item"
+																	href="javascript:buttonCategory('C');">C</a>
 															</div>
 														</div>
 														<input type="hidden" name="searchCategory" value="">
@@ -206,15 +211,15 @@
 												</div>
 											</div>
 										</div>
+										<div class="btn-group pull-right" style="margin-bottom: 10px">
+											<button type="submit" class="btn btn-primary" id="search">
+												<b>검색</b>
+											</button>
+											<button type="button" class="btn btn-secondary" id="reset">
+												<b>초기화</b>
+											</button>
+										</div>
 									</form>
-									<div class="btn-group pull-right" style="margin-bottom: 10px">
-										<button type="button" class="btn btn-primary" id="search">
-											<b>검색</b>
-										</button>
-										<button type="button" class="btn btn-secondary" id="reset">
-											<b>초기화</b>
-										</button>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -323,27 +328,21 @@
 
 	<!-- 추가, 수정, 삭제 -->
 	<script type="text/javascript">
-	
-		function buttonCategory(i){
+		function buttonCategory(i) {
 			var x = document.getElementById("searchCategoryButton");
-			if(i == null) x.innerText = "카테고리";
-			else x.innerText = i;
+			if (i == null)
+				x.innerText = "카테고리";
+			else
+				x.innerText = i;
 		}
-		
+
 		$(document).ready(function() {
 			// 상세검색 초기화
 			$("#reset").click(function() {
 				$(".accordion-search")[0].reset();
 				$("#searchCategoryButton").html('선택');
 			});
-			
-			// 상세검색 진행
-			$("#search").click(function() {
-				$(".accordion-search").attr("action", "/maintenance/list");
-				$(".accordion-search").attr("method", "GET");
-				$(".accordion-search").submit();
-			});
-			
+
 			// 추가
 			$("#add").click(function() {
 				location.href = '/maintenance/add';
