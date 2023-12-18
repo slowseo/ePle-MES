@@ -63,26 +63,30 @@
 							</div>
 							<div id="faq1" class="collapse" data-parent="#accordion" style="">
 								<div class="card-body">
-									<form class="accordion-search" method="get">
+									<form class="accordion-search">
 										<div class="col-md-12">
 											<div class="form-group">
 												<div class="row">
-												<h4 class="text-blue h4">기본 검색 </h4>
-												
-													<div class="btn-group">
+													<h4 class="text-blue h4">기본 검색</h4>
+
+													<div class="col-md-5 col-sm-12 btn-group" style="margin-left:auto;">
 														<div class="btn-group dropdown">
-															<button type="button"
+															<button type="button" id="searchCategoryButton"
 																class="btn btn-primary dropdown-toggle waves-effect"
 																data-toggle="dropdown" aria-expanded="false">
 																카테고리 <span class="caret"></span>
 															</button>
 															<div class="dropdown-menu" style="">
-																<a class="dropdown-item" href="javascript:function();">A</a>
-																<a class="dropdown-item" href="javascript:function();">B</a>
+																<a class="dropdown-item" href="javascript:buttonCategory();">선택</a>
+																<a class="dropdown-item" href="javascript:buttonCategory('A');">A</a>
+																<a class="dropdown-item" href="javascript:buttonCategory('B');">B</a>
+																<a class="dropdown-item" href="javascript:buttonCategory('C');">C</a>
 															</div>
 														</div>
-														<input type="hidden" name="searchCategory">
-														<input type="text" name="searchKeyword" class="form-control" style="width:100%;" placeholder="검색어 입력">
+														<input type="hidden" name="searchCategory" value="">
+														<input type="text" name="searchKeyword"
+															class="form-control" style="width: 100%;"
+															placeholder="검색어 입력">
 													</div>
 												</div>
 												<hr>
@@ -172,7 +176,7 @@
 													</div>
 													<div class="col-md-2 col-sm-12">
 														<div class="form-group">
-															<label>카테고리</label> <select
+															<label>물품 종류</label> <select
 																class="custom-select2 form-control" multiple="multiple"
 																style="width: 100%">
 																<optgroup label="Alaskan/Hawaiian Time Zone">
@@ -319,11 +323,27 @@
 
 	<!-- 추가, 수정, 삭제 -->
 	<script type="text/javascript">
+	
+		function buttonCategory(i){
+			var x = document.getElementById("searchCategoryButton");
+			if(i == null) x.innerText = "카테고리";
+			else x.innerText = i;
+		}
+		
 		$(document).ready(function() {
 			// 상세검색 초기화
+			$("#reset").click(function() {
+				$(".accordion-search")[0].reset();
+				$("#searchCategoryButton").html('선택');
+			});
 			
 			// 상세검색 진행
-
+			$("#search").click(function() {
+				$(".accordion-search").attr("action", "/maintenance/list");
+				$(".accordion-search").attr("method", "GET");
+				$(".accordion-search").submit();
+			});
+			
 			// 추가
 			$("#add").click(function() {
 				location.href = '/maintenance/add';
