@@ -178,7 +178,7 @@
 		// 닫기 진행!
 		if(delCheckedCount == 0) window.close();
 		else {
-			alert(array[0]);
+			// alert(array[0]);
 		}
 	</script>
 </body>
