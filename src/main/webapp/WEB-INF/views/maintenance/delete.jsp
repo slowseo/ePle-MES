@@ -151,23 +151,33 @@
 	<!-- 콘텐츠 끝 -->
 	<%@ include file="../include/footer.jsp"%>
 	<script type="text/javascript">
+		// get으로 불러온 인덱스가 있는 경우 인덱스 우선 진행
+		
+		// var del = <c:out value=el식/>
+		// var 제목 = opener.document.getElementById("tableTitle" + delList[i].value).innerText
+		
+		// 인덱스가 없는 경우 checkbox 리스트로 불러와서 진행!
+	
+		// 부모의 체크박스 목록 불러오기
 		var delList = opener.document.getElementsByName('tableCheck');
+		
+		// 체크박스 checked 개수
 		var delCheckedCount = 0;
+		
+		// 제목 저장
 		var array = [];
+		
 		for(var i = 0; i<delList.length; i++){
 			if(delList[i].checked){ // == true
+				// checked 개수 증가
 				delCheckedCount++;
+				// 부모에서 삭제하기 위해 체크한 리스트의 제목 불러오기
 				array.push(opener.document.getElementById("tableTitle" + delList[i].value).innerText);
 			}
 		}
-		// var del = <c:out value=el식/>
-		// if (delList가 없고 del(1개 삭제 인자 값) 이 없을 때!)
 		// 닫기 진행!
 		if(delCheckedCount == 0) window.close();
 		else {
-			// 인덱스가 있는 경우 인덱스 우선 진행
-			
-			// 인덱스가 없는 경우 delList로 불러와서 리스트 진행!
 			alert(array[0]);
 		}
 	</script>
