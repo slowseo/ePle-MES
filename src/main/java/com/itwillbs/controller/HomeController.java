@@ -14,7 +14,7 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home() {
+	public String homeGET() {
 		// 메인 페이지로 포워딩 이동
 		logger.debug("home() -> main 페이지 이동");
 		return "forward:/main/main";
