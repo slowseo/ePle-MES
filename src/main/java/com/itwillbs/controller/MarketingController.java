@@ -31,9 +31,9 @@ public class MarketingController {
 	//== 수주관리 ================================================
 	// 수주정보 출력하기
 	
-	public void requestListAll(Model model, 
+	public void requestListAll (Model model, 
 			@ModelAttribute("result") String result,
-			HttpSession session) { //5-1
+			HttpSession session)throws Exception { //5-1
 		// 받아올 정보? 없음
 		// request 테이블 사용
 		logger.debug("수주정보 출력하기 result 값에 따라 등록 / 수정 / 삭제 표시");

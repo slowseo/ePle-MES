@@ -1,5 +1,10 @@
 package com.itwillbs.persistence;
 
-public interface RequestDAO {
+import java.util.List;
 
+import com.itwillbs.domain.*;
+
+public interface RequestDAO {
+	
+	public List<RequestVO> getRequestListAll() throws Exception;
 }
