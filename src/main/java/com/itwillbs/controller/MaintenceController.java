@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/maintenance/*")
 public class MaintenceController {
 
-	// http://localhost:8088/maintenance/list
+	// http://localhost:8088/controller/maintenance/list
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public void maintenanceListGET() {
 		// 설비 보전 리스트

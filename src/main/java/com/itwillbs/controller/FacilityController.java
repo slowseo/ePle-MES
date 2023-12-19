@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/facility/*")
 public class FacilityController {
 
-	// http://localhost:8088/facility/list
+	// http://localhost:8088/controller/facility/list
 	@RequestMapping(value = "/list")
 	public void facilityListGET() {
 		// 설비 목록 return
 		
 	}
 
-	// http://localhost:8088/facility/insert
+	// http://localhost:8088/controller/facility/insert
 	@RequestMapping(value = "/insert", method = RequestMethod.GET)
 	public void facilityInsertGET() {
 		// 설비 추가 폼
