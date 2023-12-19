@@ -13,7 +13,7 @@
 	<%@ include file="../include/left-side-bar.jsp"%>
 	<div class="main-container">
 		<div class="pd-ltr-20">
-			<h1>로그인</h1>
+			<h1>로그인2</h1>
 			
 			<form action="/main/main" method="POST">
 				<input type="text" placeholder="아이디" name="id"> <br>
