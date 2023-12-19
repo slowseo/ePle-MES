@@ -4,7 +4,13 @@
 <head>
 <meta charset="UTF-8">
 <%@ include file="../include/head.jsp"%>
-<title>보전 추가</title>
+<title>보전 수정</title>
+<!-- 
+	get 받은 인덱스가 있는 경우 정보 하나만,
+	get 받은 인덱스가 없는 경우 자신이 수정 가능하거나 작성한 목록을 불러오기
+	
+	없는 경우 window.close() 할 수 있도록 함!
+ -->
 </head>
 <body>
 	<!-- 콘텐츠 시작 -->
@@ -12,7 +18,7 @@
 		<div class="login-box bg-white box-shadow border-radius-10">
 			<!-- 타이틀 -->
 			<div class="login-title">
-				<h1 class="text-center text-primary">보전 추가</h1>
+				<h1 class="text-center text-primary">보전 수정</h1>
 			</div>
 			<!-- 폼 -->
 			<form action="" method="post">

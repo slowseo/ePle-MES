@@ -4,7 +4,13 @@
 <head>
 <meta charset="UTF-8">
 <%@ include file="../include/head.jsp"%>
-<title>보전 추가</title>
+<title>보전 삭제</title>
+<!-- 
+	get 받은 인덱스가 있는 경우 정보 하나만,
+	get 받은 인덱스가 없는 경우 부모 페이지에서 목록 가져오기
+	
+	없는 경우 window.close() 할 수 있도록 함!
+ -->
 </head>
 <body>
 	<!-- 콘텐츠 시작 -->
@@ -12,7 +18,7 @@
 		<div class="login-box bg-white box-shadow border-radius-10">
 			<!-- 타이틀 -->
 			<div class="login-title">
-				<h1 class="text-center text-primary">보전 추가</h1>
+				<h1 class="text-center text-primary">보전 삭제</h1>
 			</div>
 			<!-- 폼 -->
 			<form action="" method="post">
@@ -142,7 +148,28 @@
 			<!-- 폼 -->
 		</div>
 	</div>
-	<!-- 콘텐츠 끝> -->
+	<!-- 콘텐츠 끝 -->
 	<%@ include file="../include/footer.jsp"%>
+	<script type="text/javascript">
+		var delList = opener.document.getElementsByName('tableCheck');
+		var delCheckedCount = 0;
+		var array = [];
+		for(var i = 0; i<delList.length; i++){
+			if(delList[i].checked){ // == true
+				delCheckedCount++;
+				array.push(opener.document.getElementById("tableTitle" + delList[i].value).innerText);
+			}
+		}
+		// var del = <c:out value=el식/>
+		// if (delList가 없고 del(1개 삭제 인자 값) 이 없을 때!)
+		// 닫기 진행!
+		if(delCheckedCount == 0) window.close();
+		else {
+			// 인덱스가 있는 경우 인덱스 우선 진행
+			
+			// 인덱스가 없는 경우 delList로 불러와서 리스트 진행!
+			alert(array[0]);
+		}
+	</script>
 </body>
 </html>

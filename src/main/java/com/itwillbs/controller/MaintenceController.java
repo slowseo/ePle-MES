@@ -29,6 +29,30 @@ public class MaintenceController {
 		// 일상보전 or 사후보전 / 예방보전 / 긴급보전
 		// -> 다른 데이터베이스에서 진행(일상 보전은 결과만)
 	}
+	
+	@RequestMapping(value = "/update", method = RequestMethod.GET)
+	public void maintenanceUpdateGET() {
+		// 설비 보전 수정 폼
+
+	}
+	
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public void maintenanceUpdatePOST() {
+		// 설비 보전 수정 액션
+
+	}
+	
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	public void maintenanceDeleteGET() {
+		// 설비 보전 삭제 폼
+
+	}
+	
+	@RequestMapping(value = "/delete", method = RequestMethod.POST)
+	public void maintenanceDeletePOST() {
+		// 설비 보전 삭제 액션
+
+	}
 
 	@RequestMapping(value = "/resultList", method = RequestMethod.GET)
 	public void maintenanceResultListGET() {
