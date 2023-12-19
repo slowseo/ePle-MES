@@ -24,7 +24,7 @@
 					<li class="nav-item"><a class="nav-link text-blue active"
 						href="/maintenance/list">보전 목록</a></li>
 					<li class="nav-item"><a class="nav-link text-blue"
-						href="/maintenance/000">보전 결과</a></li>
+						href="/maintenance/resultList">보전 결과</a></li>
 				</ul>
 				<br>
 				<div class="alert alert-success alert-dismissible fade show"
@@ -346,8 +346,12 @@
 				// 만들 팝업창 height 크기의 1/2 만큼 보정값으로 빼주기
 				var popupY= Math.ceil(( window.screen.height - popupHeight )/2);
 				
+				// 팝업 오픈
 				window.open('/maintenance/add', "_blank", 
-						"status=no, width:" + popupWidth + "px, height:" + popupHeight + "px, top=" + popupY + ", left=" + popupX + ", resizable=no");
+						"status=no, width:" + popupWidth + 
+						"px, height:" + popupHeight + "px, top=" + popupY + 
+						", left=" + popupX + 
+						", resizable=no");
 			});
 
 			// 수정 - 표에서 선택된 게 1개인 경우에만 열리도록 함
