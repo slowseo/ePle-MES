@@ -39,5 +39,8 @@ public class MainController {
 		logger.info("cc : loginGET() 실행");
 	}
 	
-	
+	@PostMapping (value = "/login")
+	public void loginPOST() {
+		logger.debug("loginPOST() 실행");
+	}
 }
