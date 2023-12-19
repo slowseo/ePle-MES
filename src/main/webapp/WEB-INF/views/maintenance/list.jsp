@@ -88,10 +88,10 @@
 																	href="javascript:buttonCategory('C');">C</a>
 															</div>
 														</div>
-														<input type="hidden" id="searchCategory" name="searchCategory">
-														<input type="text" name="searchKeyword"
-															class="form-control" style="width: 100%;"
-															placeholder="검색어 입력">
+														<input type="hidden" id="searchCategory"
+															name="searchCategory"> <input type="text"
+															name="searchKeyword" class="form-control"
+															style="width: 100%;" placeholder="검색어 입력">
 													</div>
 												</div>
 												<hr>
@@ -233,7 +233,7 @@
 							<button type="button" class="btn btn-success" id="add">
 								<b>추가</b>
 							</button>
-							<button type="button" class="btn btn-secondary" id="update">
+							<button type="button" class="btn btn-warning" id="update">
 								<b>수정</b>
 							</button>
 							<button type="button" class="btn btn-danger" id="delete">
@@ -320,6 +320,10 @@
 				</div>
 				<!-- Checkbox select Datatable End -->
 				<!-- 푸터 -->
+				<div class="footer-wrap pd-20 mb-20 card-box">
+					ePle MES made by <a href="https://github.com/dropways"
+						target="_blank">아이티윌 부산 2023년 7월 프로젝트 2차 1조</a>
+				</div>
 				<%@ include file="../include/footer.jsp"%>
 				<%@ include file="../include/datatable.jsp"%>
 			</div>
@@ -328,35 +332,29 @@
 
 	<!-- 추가, 수정, 삭제 -->
 	<script type="text/javascript">
-		function buttonCategory(i) {
-			var x = document.getElementById("searchCategoryButton");
-			var y = document.getElementById("searchCategory");
-			if (i == null){				
-				x.innerText = "카테고리";
-				y.value = null;
-			}
-			else{				
-				x.innerText = i;
-				y.value = i;
-			}
-		}
-		
 		$(document).ready(function() {
-			// 상세검색 초기화
-			$("#reset").click(function() {
-				buttonCategory(null);
-				$(".select2-selection__choice").remove();
-			});
-
 			// 추가
 			$("#add").click(function() {
-				location.href = '/maintenance/add';
+				
+				// 팝업창의 가로
+				var popupWidth = 300;
+				// 팝업창의 세로
+				var popupHeight = 500;
+				
+				// 만들 팝업창 width 크기의 1/2 만큼 보정값으로 빼주기
+				var popupX = Math.ceil(( window.screen.width - popupWidth )/2);
+				// 만들 팝업창 height 크기의 1/2 만큼 보정값으로 빼주기
+				var popupY= Math.ceil(( window.screen.height - popupHeight )/2);
+				
+				window.open('/maintenance/add', "_blank", 
+						"status=no, width:" + popupWidth + "px, height:" + popupHeight + "px, top=" + popupY + ", left=" + popupX + ", resizable=no");
 			});
 
 			// 수정 - 표에서 선택된 게 1개인 경우에만 열리도록 함
 			$("#update").click(function() {
 				$(".table").attr("action", "/maintenance/update");
 				$(".table").attr("method", "GET");
+				$(".table").attr("target", "_blank");
 				$(".table").submit();
 			});
 
@@ -364,6 +362,7 @@
 			$("#delete").click(function() {
 				$(".table").attr("action", "/maintenance/delete");
 				$(".table").attr("method", "GET");
+				$(".table").attr("target", "_blank");
 				$(".table").submit();
 			});
 		});

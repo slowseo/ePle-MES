@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<div class="footer-wrap pd-20 mb-20 card-box">
-	ePle MES made by <a href="https://github.com/dropways" target="_blank">아이티윌
-		부산 2023년 7월 프로젝트 2차 1조</a>
-</div>
 <!-- 푸터, 스크립트 전용 -->
 <!-- js -->
 <script src="../resources/vendors/scripts/core.js"></script>
@@ -26,6 +22,18 @@
 		height="0" width="0" style="display: none; visibility: hidden"></iframe>
 </noscript>
 <script type="text/javascript">
+	function buttonCategory(i) {
+		var x = document.getElementById("searchCategoryButton");
+		var y = document.getElementById("searchCategory");
+		if (i == null) {
+			x.innerText = "카테고리";
+			y.value = null;
+		} else {
+			x.innerText = i;
+			y.value = i;
+		}
+	}
+
 	$(document).ready(function() {
 		// 테이블 체크 박스 클릭 시 전체선택
 		$("#tableCheckAll").click(function() {
@@ -34,13 +42,20 @@
 			else
 				$("input[name=tableCheck]").prop("checked", false);
 		});
-		
+
 		$("#formCheckAll").click(function() {
 			if ($("#formCheckAll").is(":checked"))
 				$("input[name=formCheck]").prop("checked", true);
 			else
 				$("input[name=formCheck]").prop("checked", false);
 		});
+
+		// 상세검색 초기화
+		$("#reset").click(function() {
+			buttonCategory(null);
+			$(".select2-selection__choice").remove();
+		});
+
 	});
 </script>
 <!-- End Google Tag Manager (noscript) -->

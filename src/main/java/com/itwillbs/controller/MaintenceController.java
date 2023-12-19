@@ -16,13 +16,13 @@ public class MaintenceController {
 		// 설비 보전 리스트
 	}
 
-	@RequestMapping(value = "/insert", method = RequestMethod.GET)
+	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public void maintenanceInsertGET() {
 		// 설비 보전 등록 폼
 
 	}
 
-	@RequestMapping(value = "/insert", method = RequestMethod.POST)
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public void maintenanceInsertPOST() {
 		// 설비 보전 등록 액션
 		
