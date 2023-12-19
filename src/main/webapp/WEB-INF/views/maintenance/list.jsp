@@ -339,7 +339,7 @@
 				// 팝업창의 가로
 				var popupWidth = 300;
 				// 팝업창의 세로
-				var popupHeight = 500;
+				var popupHeight = 700;
 				
 				// 만들 팝업창 width 크기의 1/2 만큼 보정값으로 빼주기
 				var popupX = Math.ceil(( window.screen.width - popupWidth )/2);
