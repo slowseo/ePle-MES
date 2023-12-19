@@ -63,7 +63,7 @@
 							</div>
 							<div id="faq1" class="collapse" data-parent="#accordion" style="">
 								<div class="card-body">
-									<form class="accordion-search" method="GET" action="#">
+									<form id="accordion-search" method="GET" action="#">
 										<div class="col-md-12">
 											<div class="form-group">
 												<div class="row">
@@ -88,7 +88,7 @@
 																	href="javascript:buttonCategory('C');">C</a>
 															</div>
 														</div>
-														<input type="hidden" name="searchCategory" value="">
+														<input type="hidden" id="searchCategory" name="searchCategory">
 														<input type="text" name="searchKeyword"
 															class="form-control" style="width: 100%;"
 															placeholder="검색어 입력">
@@ -183,7 +183,7 @@
 														<div class="form-group">
 															<label>물품 종류</label> <select
 																class="custom-select2 form-control" multiple="multiple"
-																style="width: 100%">
+																style="width: 100%" name="category">
 																<optgroup label="Alaskan/Hawaiian Time Zone">
 																	<option value="AK">Alaska</option>
 																	<option value="HI">Hawaii</option>
@@ -215,7 +215,7 @@
 											<button type="submit" class="btn btn-primary" id="search">
 												<b>검색</b>
 											</button>
-											<button type="button" class="btn btn-secondary" id="reset">
+											<button type="reset" class="btn btn-secondary" id="reset">
 												<b>초기화</b>
 											</button>
 										</div>
@@ -330,17 +330,22 @@
 	<script type="text/javascript">
 		function buttonCategory(i) {
 			var x = document.getElementById("searchCategoryButton");
-			if (i == null)
+			var y = document.getElementById("searchCategory");
+			if (i == null){				
 				x.innerText = "카테고리";
-			else
+				y.value = null;
+			}
+			else{				
 				x.innerText = i;
+				y.value = i;
+			}
 		}
-
+		
 		$(document).ready(function() {
 			// 상세검색 초기화
 			$("#reset").click(function() {
-				$(".accordion-search")[0].reset();
-				$("#searchCategoryButton").html('선택');
+				buttonCategory(null);
+				$(".select2-selection__choice").remove();
 			});
 
 			// 추가
