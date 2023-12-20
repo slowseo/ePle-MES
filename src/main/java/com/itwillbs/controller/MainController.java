@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /** 메인 페이지 **/
 
 @Controller
-@RequestMapping(value = "/main/*", method = RequestMethod.GET)
+@RequestMapping(value = "/main/*")
 public class MainController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
@@ -40,7 +40,8 @@ public class MainController {
 	}
 	
 	@PostMapping (value = "/login")
-	public void loginPOST() {
+	public String loginPOST() {
 		logger.debug("loginPOST() 실행");
+		return "redirect:/";
 	}
 }

@@ -19,5 +19,4 @@ public class HomeController {
 		logger.debug("home() -> main 페이지 이동");
 		return "forward:/main/main";
 	}
-	
 }

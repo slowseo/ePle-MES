@@ -11,19 +11,14 @@
 	<div class="login-header box-shadow">
 		<div class="container-fluid d-flex justify-content-between align-items-center">
 			<div class="brand-logo">
-				<a href="login.html"> <img src="vendors/images/deskapp-logo.svg" alt="" />
+				<a href="login.html"> <img src="/resources/vendors/images/deskapp-logo.svg" alt="" />
 				</a>
-			</div>
-			<div class="login-menu">
-				<ul>
-					<li><a href="register.html">Register</a></li>
-				</ul>
 			</div>
 		</div>
 	</div>
 	<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">
 		<div class="container">
-			<div class="row align-items-center">
+			<div class="row align-items-center justify-content-center">
 				<div class="col-md-6 col-lg-5">
 					<div class="login-box bg-white box-shadow border-radius-10">
 						<div class="login-title">
@@ -74,11 +69,7 @@
 											use code for form submit
 											<input class="btn btn-primary btn-lg btn-block" type="submit" value="Sign In">
 										-->
-										<a class="btn btn-primary btn-lg btn-block" href="index.html">Sign In</a>
-									</div>
-									<div class="font-16 weight-600 pt-10 pb-10 text-center" data-color="#707373">OR</div>
-									<div class="input-group mb-0">
-										<a class="btn btn-outline-primary btn-lg btn-block" href="register.html">Register To Create Account</a>
+										<a class="btn btn-primary btn-lg btn-block" href="index.html">로그인</a>
 									</div>
 								</div>
 							</div>
