@@ -11,7 +11,7 @@
 	<div class="login-header box-shadow">
 		<div class="container-fluid d-flex justify-content-between align-items-center">
 			<div class="brand-logo">
-				<a href="login.html"> <img src="/resources/vendors/images/deskapp-logo.svg" alt="" />
+				<a href="/"> <img src="/resources/vendors/images/deskapp-logo.svg" alt="" />
 				</a>
 			</div>
 		</div>
@@ -30,22 +30,22 @@
 									<label class="btn active"> <input type="radio" name="options" id="admin" />
 										<div class="icon">
 											<img src="/resources/vendors/images/briefcase.svg" class="svg" alt="" />
-										</div> <span>I'm</span> Manager
+										</div> <span>일반</span>로그인
 									</label> <label class="btn"> <input type="radio" name="options" id="user" />
 										<div class="icon">
 											<img src="/resources/vendors/images/person.svg" class="svg" alt="" />
-										</div> <span>I'm</span> Employee
+										</div> <span>바코드</span>로그인
 									</label>
 								</div>
 							</div>
 							<div class="input-group custom">
-								<input type="text" class="form-control form-control-lg" placeholder="Username" />
+								<input type="text" class="form-control form-control-lg" placeholder="사번" />
 								<div class="input-group-append custom">
 									<span class="input-group-text"><i class="icon-copy dw dw-user1"></i></span>
 								</div>
 							</div>
 							<div class="input-group custom">
-								<input type="password" class="form-control form-control-lg" placeholder="**********" />
+								<input type="password" class="form-control form-control-lg" placeholder="비밀번호" />
 								<div class="input-group-append custom">
 									<span class="input-group-text"><i class="dw dw-padlock1"></i></span>
 								</div>
@@ -58,19 +58,13 @@
 								</div>
 								<div class="col-6">
 									<div class="forgot-password">
-										<a href="forgot-password.html">Forgot Password</a>
+										<a href="forgot-password.html">비밀번호 찾기</a>
 									</div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-sm-12">
-									<div class="input-group mb-0">
-										<!--
-											use code for form submit
-											<input class="btn btn-primary btn-lg btn-block" type="submit" value="Sign In">
-										-->
-										<a class="btn btn-primary btn-lg btn-block" href="index.html">로그인</a>
-									</div>
+									<input class="btn btn-primary btn-lg btn-block" type="submit" value="로그인">
 								</div>
 							</div>
 						</form>
