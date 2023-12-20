@@ -38,7 +38,7 @@ public class MarketingController {
 		// request 테이블 사용
 		logger.debug("수주정보 출력하기 result 값에 따라 등록 / 수정 / 삭제 표시");
 		
-		List<RequestVO> requestList ;
+		List<RequestVO> requestList =rservice.requestListAll();
 	}
 	
 	// 수주정보 상세 출력(수주번호를 클릭 시 데이터 출력하기
